@@ -1,0 +1,6 @@
+{
+  "name": "vcd-parser",
+  "version": "0.8.0",
+  "description": "A simple VCD parser easily usable in CMake projects. This library is a fork of the library at https://github.com/ben-marshall/verilog-vcd-parser",
+  "homepage": "https://github.com/gian21391/verilog-vcd-parser"
+}
