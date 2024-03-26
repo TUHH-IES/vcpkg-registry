@@ -1,28 +1,20 @@
 {
-    "name": "chimeratk-cppext",
-    "version-string": "01.05.02",
-    "description": "A collection of C++ classes which are quite fundamental and thus considered inside ChimeraTK as an extension of C++. The classes might have different quality, some might be more experimental while others might be extensively tested.",
-    "homepage": "https://github.com/ChimeraTK/cppext",
-    "dependencies": [
-        {
-          "name": "boost-test"
-        },
-        {
-          "name": "boost-system"
-        },
-        {
-          "name": "boost-thread"
-        },
-        {
-          "name": "boost-lockfree"
-        },
-        {
-          "name": "vcpkg-cmake",
-          "host": true
-        },
-        {
-          "name": "vcpkg-cmake-config",
-          "host": true
-        }
-      ]
-  }
+  "name": "chimeratk-cppext",
+  "version-string": "01.05.02",
+  "description": "A collection of C++ classes which are quite fundamental and thus considered inside ChimeraTK as an extension of C++. The classes might have different quality, some might be more experimental while others might be extensively tested.",
+  "homepage": "https://github.com/ChimeraTK/cppext",
+  "dependencies": [
+    "boost-lockfree",
+    "boost-system",
+    "boost-test",
+    "boost-thread",
+    {
+      "name": "vcpkg-cmake",
+      "host": true
+    },
+    {
+      "name": "vcpkg-cmake-config",
+      "host": true
+    }
+  ]
+}
