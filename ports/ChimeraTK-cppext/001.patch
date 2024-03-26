@@ -1,20 +1,18 @@
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index fb4eae9..28e2e91 100644
+index fb4eae9..d5fbfdf 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
-@@ -1,5 +1,10 @@
+@@ -1,5 +1,8 @@
 -project(ChimeraTK-cppext)
 +set(CMAKE_TOOLCHAIN_FILE "${VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake"
 +        CACHE STRING "Vcpkg toolchain file")
 +
  cmake_minimum_required(VERSION 3.16)
-+project(cppext)
-+
-+message(${CMAKE_TOOLCHAIN_FILE})
++project(ChimeraTK-cppext)
  
  list(APPEND CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake/Modules)
  
-@@ -12,7 +17,7 @@ include(cmake/set_version_numbers.cmake)
+@@ -12,7 +15,7 @@ include(cmake/set_version_numbers.cmake)
  add_library(${PROJECT_NAME} INTERFACE)
  
  # find BOOST libraries (needed for tests only)
@@ -23,7 +21,7 @@ index fb4eae9..28e2e91 100644
  find_package(Threads REQUIRED)
  find_package(GccAtomic)
  
-@@ -46,17 +51,17 @@ if(BUILD_TESTS)
+@@ -46,17 +49,17 @@ if(BUILD_TESTS)
      #NAME_WE means the base name without path and (longest) extension
      get_filename_component(excutableName ${testExecutableSrcFile} NAME_WE)
      add_executable(${excutableName} ${testExecutableSrcFile})
@@ -44,7 +42,7 @@ index fb4eae9..28e2e91 100644
  
  # install header files
  install(DIRECTORY ${CMAKE_SOURCE_DIR}/include/ DESTINATION include/ChimeraTK/cppext
-@@ -64,14 +69,42 @@ install(DIRECTORY ${CMAKE_SOURCE_DIR}/include/ DESTINATION include/ChimeraTK/cpp
+@@ -64,14 +67,42 @@ install(DIRECTORY ${CMAKE_SOURCE_DIR}/include/ DESTINATION include/ChimeraTK/cpp
  
  # this only provides cmake export
  include(GNUInstallDirs)
@@ -78,7 +76,7 @@ index fb4eae9..28e2e91 100644
 +        ${CMAKE_CURRENT_BINARY_DIR}/chimeratk-cppext-config.cmake
 +        ${CMAKE_CURRENT_BINARY_DIR}/chimeratk-cppext-config-version.cmake
 +        DESTINATION ${CMAKE_INSTALL_DATADIR}/chimeratk-cppext)
-+install(TARGETS cppext EXPORT chimeratk-cppext-targets)
++install(TARGETS ChimeraTK-cppext EXPORT chimeratk-cppext-targets)
 +#install(DIRECTORY include/
 +#        DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}
 +#        FILES_MATCHING PATTERN "*.hpp")
