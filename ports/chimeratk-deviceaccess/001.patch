@@ -1,5 +1,5 @@
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index 555bbb8e..a4bbdab8 100644
+index 555bbb8e..2a2c67ea 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
 @@ -1,3 +1,6 @@
@@ -9,6 +9,24 @@ index 555bbb8e..a4bbdab8 100644
  cmake_minimum_required(VERSION 3.16)
  Project(ChimeraTK-DeviceAccess)
  
+@@ -11,13 +14,13 @@ include(cmake/set_version_numbers.cmake)
+ # C++ compiler flags needed to compile this project and against this project
+ # The -D_LIBCPP_ENABLE_CXX17_REMOVED_AUTO_PTR flag is only needed for
+ # libxml++ 2.6.
+-set(${PROJECT_NAME}_CXX_FLAGS "${${PROJECT_NAME}_CXX_FLAGS} -D_LIBCPP_ENABLE_CXX17_REMOVED_AUTO_PTR")
++#set(${PROJECT_NAME}_CXX_FLAGS "${${PROJECT_NAME}_CXX_FLAGS} -D_LIBCPP_ENABLE_CXX17_REMOVED_AUTO_PTR")
+ 
+-include(cmake/set_default_build_to_release.cmake)
++#include(cmake/set_default_build_to_release.cmake)
+ 
+ # modifies ${PROJECT_NAME}_CXX_FLAGS
+-include(cmake/set_default_flags.cmake)
+-include(cmake/enable_code_coverage_report.cmake)
++#include(cmake/set_default_flags.cmake)
++#include(cmake/enable_code_coverage_report.cmake)
+ 
+ include(cmake/CheckFileOffsetBits.cmake)
+ CHECK_FILE_OFFSET_BITS()
 @@ -33,10 +36,11 @@ endif(SUPPRESS_AUTO_DOC_BUILD)
  
  FIND_PACKAGE(Boost COMPONENTS thread system chrono filesystem REQUIRED)
@@ -23,7 +41,18 @@ index 555bbb8e..a4bbdab8 100644
  PKG_CHECK_MODULES(LibXML++ REQUIRED IMPORTED_TARGET ${LIBXML++_VERSION})
  
  # The PCIe backend can only be built on Linux, so we define a variable here that
-@@ -110,7 +114,7 @@ target_compile_options(${PROJECT_NAME} PUBLIC ${projectCxxFlags})
+@@ -102,15 +106,15 @@ endif()
+ add_library(${PROJECT_NAME} SHARED ${SOURCE})
+ 
+ # we need the compile options as array to tell cmake they should be exported
+-include(cmake/format_options.cmake)
+-formatOptionsAsArray(projectCxxFlags ${${PROJECT_NAME}_CXX_FLAGS})
+-target_compile_options(${PROJECT_NAME} PUBLIC ${projectCxxFlags})
++#include(cmake/format_options.cmake)
++#formatOptionsAsArray(projectCxxFlags ${${PROJECT_NAME}_CXX_FLAGS})
++#target_compile_options(${PROJECT_NAME} PUBLIC ${projectCxxFlags})
+ 
+ # exported includes are all under ${CMAKE_INSTALL_PREFIX}/include
  target_include_directories(${PROJECT_NAME} INTERFACE "$<INSTALL_INTERFACE:include>")
  set_target_properties(${PROJECT_NAME} PROPERTIES VERSION ${${PROJECT_NAME}_FULL_LIBRARY_VERSION} SOVERSION ${${PROJECT_NAME}_SOVERSION})
  target_link_libraries(${PROJECT_NAME}
