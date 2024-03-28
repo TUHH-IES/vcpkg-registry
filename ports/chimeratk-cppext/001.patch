@@ -1,5 +1,5 @@
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index fb4eae9..79ab915 100644
+index fb4eae9..82ff88d 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
 @@ -1,5 +1,8 @@
@@ -12,15 +12,6 @@ index fb4eae9..79ab915 100644
  
  list(APPEND CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake/Modules)
  
-@@ -12,7 +15,7 @@ include(cmake/set_version_numbers.cmake)
- add_library(${PROJECT_NAME} INTERFACE)
- 
- # find BOOST libraries (needed for tests only)
--find_package(Boost COMPONENTS unit_test_framework system thread REQUIRED)
-+find_package(Boost COMPONENTS system thread REQUIRED)
- find_package(Threads REQUIRED)
- find_package(GccAtomic)
- 
 @@ -23,14 +26,14 @@ IF(GccAtomic_FOUND)
  ENDIF()
  
@@ -32,9 +23,10 @@ index fb4eae9..79ab915 100644
 -include(cmake/enable_latest_cxx_support.cmake)
 +#include(cmake/enable_latest_cxx_support.cmake)
  # we need the options as array 
- include(cmake/format_options.cmake)
+-include(cmake/format_options.cmake)
 -formatOptionsAsArray(projectCxxFlags ${${PROJECT_NAME}_CXX_FLAGS})
 -target_compile_options(${PROJECT_NAME} INTERFACE ${projectCxxFlags})
++#include(cmake/format_options.cmake)
 +#formatOptionsAsArray(projectCxxFlags ${${PROJECT_NAME}_CXX_FLAGS})
 +#target_compile_options(${PROJECT_NAME} INTERFACE ${projectCxxFlags})
  
