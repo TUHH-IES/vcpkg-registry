@@ -2,6 +2,7 @@
     "default": {
 		"vcd-parser": { "baseline": "0.8.0", "port-version": 0 },
 		"chimeratk-deviceaccess": { "baseline": "03.14.00", "port-version": 0 },
-		"chimeratk-cppext": { "baseline": "01.05.02", "port-version": 0 }
+		"chimeratk-cppext": { "baseline": "01.05.02", "port-version": 0 },
+		"yosys-verilog": { "baseline": "0.49.21", "port-version": 0 }
 	}
 }

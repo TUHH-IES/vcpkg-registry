@@ -1,0 +1,6 @@
+yosys_verilog provides CMake targets:
+
+find_package(yosys-verilog CONFIG REQUIRED)
+target_link_libraries(main PRIVATE yosys-verilog::yosys-verilog)
+file(GLOB_RECURSE yosys_files ${yosys-verilog_DIR}/sources/*.cc)
+target_sources(main PUBLIC ${yosys_files})
