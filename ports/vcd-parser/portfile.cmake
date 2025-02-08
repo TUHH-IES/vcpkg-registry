@@ -6,6 +6,11 @@ vcpkg_from_github(
   HEAD_REF master
 )
 
+vcpkg_find_acquire_program(BISON)
+vcpkg_find_acquire_program(FLEX)
+get_filename_component(BISON_EXE_PATH "${BISON}" DIRECTORY)
+vcpkg_add_to_path("${BISON_EXE_PATH}")
+
 vcpkg_configure_cmake(
   SOURCE_PATH "${SOURCE_PATH}"
   PREFER_NINJA
