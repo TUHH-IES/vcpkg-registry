@@ -6,9 +6,8 @@
   "dependencies": [
     "abseil",
     "gtest",
-    "re2",
     "nlohmann-json",
-    "zlib",
+    "re2",
     {
       "name": "vcpkg-cmake",
       "host": true
@@ -16,6 +15,7 @@
     {
       "name": "vcpkg-cmake-config",
       "host": true
-    }
+    },
+    "zlib"
   ]
 }
