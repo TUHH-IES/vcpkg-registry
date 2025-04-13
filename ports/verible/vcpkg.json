@@ -1,0 +1,21 @@
+{
+  "name": "verible",
+  "version": "0.0.3958",
+  "description": "",
+  "homepage": "https://github.com/gian21391/verible",
+  "dependencies": [
+    "abseil",
+    "gtest",
+    "re2",
+    "nlohmann-json",
+    "zlib",
+    {
+      "name": "vcpkg-cmake",
+      "host": true
+    },
+    {
+      "name": "vcpkg-cmake-config",
+      "host": true
+    }
+  ]
+}
