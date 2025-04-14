@@ -4,8 +4,12 @@
   "description": "",
   "homepage": "https://github.com/gian21391/verible",
   "dependencies": [
-    "abseil",
-    "gtest",
+    {
+      "name": "abseil",
+      "features": [
+        "cxx17"
+      ]
+    },
     "nlohmann-json",
     "re2",
     {
