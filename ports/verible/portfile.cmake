@@ -1,8 +1,8 @@
 vcpkg_from_github(
   OUT_SOURCE_PATH SOURCE_PATH
   REPO gian21391/verible
-  REF 06b885c3d602d37d93ab85015792331eba254a9b
-  SHA512 b461461068e7a0e9f603196689c7b02d6382256205b29547000563d90d93e2d4951590e3ae4be4010067fa8860cafafacdd6809dd3a01c1760cb816082afbe38
+  REF 8d7281a4f3e6da6dcadf1471600390f3b3d8cf6e
+  SHA512 58af76145fe54f984e5ba7c8404d229b9877767b06f1c4e0c5df09928f19fbc51ead59527946993009b7143d3c3449ff2071002a109318abed2b45d396daa0df
   HEAD_REF cmake_build
 )
 
@@ -25,6 +25,7 @@ file(REMOVE_RECURSE "${CURRENT_PACKAGES_DIR}/debug/include")
 file(REMOVE_RECURSE "${CURRENT_PACKAGES_DIR}/include/common/tools" "${CURRENT_PACKAGES_DIR}/include/verilog/tools/diff" "${CURRENT_PACKAGES_DIR}/include/verilog/tools/formatter" "${CURRENT_PACKAGES_DIR}/include/verilog/tools/kythe/testdata/include_file_test" "${CURRENT_PACKAGES_DIR}/include/verilog/tools/kythe/testdata/include_with_dir_test/include_dir" "${CURRENT_PACKAGES_DIR}/include/verilog/tools/kythe/testdata/multi_file_test" "${CURRENT_PACKAGES_DIR}/include/verilog/tools/lint/testdata" "${CURRENT_PACKAGES_DIR}/include/verilog/tools/ls/vscode/images" "${CURRENT_PACKAGES_DIR}/include/verilog/tools/ls/vscode/src" "${CURRENT_PACKAGES_DIR}/include/verilog/tools/obfuscator" "${CURRENT_PACKAGES_DIR}/include/verilog/tools/preprocessor" "${CURRENT_PACKAGES_DIR}/include/verilog/tools/project" "${CURRENT_PACKAGES_DIR}/include/verilog/tools/syntax/export_json_examples")
 file(REMOVE_RECURSE "${CURRENT_PACKAGES_DIR}/include/verilog/tools/kythe/testdata/include_with_dir_test" "${CURRENT_PACKAGES_DIR}/include/verilog/tools/lint" "${CURRENT_PACKAGES_DIR}/include/verilog/tools/ls/vscode" "${CURRENT_PACKAGES_DIR}/include/verilog/tools/syntax")
 file(REMOVE_RECURSE "${CURRENT_PACKAGES_DIR}/include/verilog/tools/kythe/testdata")
+file(REMOVE_RECURSE "${CURRENT_PACKAGES_DIR}/include/verible/common/tools" "${CURRENT_PACKAGES_DIR}/include/verible/verilog/tools/diff" "${CURRENT_PACKAGES_DIR}/include/verible/verilog/tools/formatter" "${CURRENT_PACKAGES_DIR}/include/verible/verilog/tools/kythe/testdata/include_file_test" "${CURRENT_PACKAGES_DIR}/include/verible/verilog/tools/kythe/testdata/include_with_dir_test/include_dir" "${CURRENT_PACKAGES_DIR}/include/verible/verilog/tools/kythe/testdata/multi_file_test" "${CURRENT_PACKAGES_DIR}/include/verible/verilog/tools/lint/testdata" "${CURRENT_PACKAGES_DIR}/include/verible/verilog/tools/ls/vscode/images" "${CURRENT_PACKAGES_DIR}/include/verible/verilog/tools/ls/vscode/src" "${CURRENT_PACKAGES_DIR}/include/verible/verilog/tools/obfuscator" "${CURRENT_PACKAGES_DIR}/include/verible/verilog/tools/preprocessor" "${CURRENT_PACKAGES_DIR}/include/verible/verilog/tools/project" "${CURRENT_PACKAGES_DIR}/include/verible/verilog/tools/syntax/export_json_examples")
 file(
   INSTALL "${SOURCE_PATH}/LICENSE"
   DESTINATION "${CURRENT_PACKAGES_DIR}/share/${PORT}"
