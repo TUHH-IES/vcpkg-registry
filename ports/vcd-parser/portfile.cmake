@@ -1,6 +1,6 @@
 vcpkg_from_github(
   OUT_SOURCE_PATH SOURCE_PATH
-  REPO gian21391/verilog-vcd-parser
+  REPO TUHH-IES/verilog-vcd-parser
   REF 6ebd9ba5d25c7ba7ea60c961485a26a71dbc7919
   SHA512 70a73efe5539c1b6c1f334b6196b691784fb90734e06835b35bc6c95834ba0413e9df42fb7290707258dfdf27f92a505cc50f2ebd5c0f3c618bc60e063b8722e
   HEAD_REF master
