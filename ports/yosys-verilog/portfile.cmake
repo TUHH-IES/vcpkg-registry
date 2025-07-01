@@ -3,7 +3,7 @@ vcpkg_check_linkage(ONLY_STATIC_LIBRARY)
 vcpkg_from_github(
     OUT_SOURCE_PATH SOURCE_PATH
     REPO TUHH-IES/yosys_verilog
-    REF a6ac2b9615676f6a2f0f997a91ee782f5d3e3bab
+    REF f29d5ae2246b8afb25e3c1b4f81c6d9970feeb71
     SHA512 63e4610b1b3f5db58d5bb5533210454c0b3df7e30e6ffd07bf01aa153a1ebeec2859d1f7b6c958fd6fe95a3c427bf845a14b36b85d4e36ec1d8bb1180a8e06f6
     HEAD_REF main
 )
