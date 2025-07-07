@@ -22,3 +22,4 @@ https://learn.microsoft.com/en-us/vcpkg/get_started/get-started-adding-to-regist
 * Console output for the above command results in git-tree value to be updated in the **versions** directory for every vcpkg-sample-library
   ![image](https://github.com/user-attachments/assets/fc9dbf71-82ff-4fc9-8bee-b29be1b3e4ae)
 * The other necessary parameters for versions directory of vcpkg-sample-library like **version** and **port-version** can be obtained from **vcpkg.json** of "ports/vcpkg-sample-library/"
+* Alternatively, command x-add-verion works with additional options passed. Use command "vcpkg x-add-version vcpkg-sample-library --debug --x-builtin-ports-root=./ports --x-builtin-registry-versions-dir=./versions" instead
