@@ -23,3 +23,7 @@ https://learn.microsoft.com/en-us/vcpkg/get_started/get-started-adding-to-regist
   ![image](https://github.com/user-attachments/assets/fc9dbf71-82ff-4fc9-8bee-b29be1b3e4ae)
 * The other necessary parameters for versions directory of vcpkg-sample-library like **version** and **port-version** can be obtained from **vcpkg.json** of "ports/vcpkg-sample-library/"
 * Alternatively, command x-add-verion works with additional options passed. Use command "vcpkg x-add-version vcpkg-sample-library --debug --x-builtin-ports-root=./ports --x-builtin-registry-versions-dir=./versions" instead
+
+* Commands to run from **vcpkg-registry\ports** after updating REF of any sample package libraries:
+  * vcpkg install sample-package-library --overlay-ports=.
+  * vcpkg remove sample-package-library: in case the last command results in - **The following packages are already installed** without SHA512 update and then re-run last command
